@@ -2,7 +2,7 @@
 # @Time : 2021/5/17 17:58
 # @Author : Jielong Tang & Shumeng Jia
 # @File : data_generate.py
-
+# @function : It is a file to generate a appropriate dataset
 
 import tensorflow
 import keras
