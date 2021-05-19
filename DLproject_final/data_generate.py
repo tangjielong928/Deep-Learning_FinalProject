@@ -26,11 +26,24 @@ patients = ["01","02","03","04","05","06","07","08","09","10"]
 
 
 def loadSummaryPatient(index):
+     """
+     It is a function to return open file
+     :param index: the index in patients list use to read the file
+     :return f: the txt file
+     :return parent: the txt file parent path
+     """
     f = open(pathDataSet+'chb'+patients[index]+'/chb'+patients[index]+'-summary.txt', 'r')
     parent = 'chb'+patients[index]+'/'
     return f, parent
 
 def seizureImageGenerate(secSt, secEn, name_F, parent):
+     """
+     It is a function to convert EEG raw signal to 2D image and give the correct label name
+     :param secSt: seizure start time
+     :param secEn: seizure end time
+     :param name_F: the corresponding EDF file
+     :param parent: parent path 
+     """
     file1 = pyedflib.EdfReader(pathDataSet+parent+name_F)
     n = file1.signals_in_file
     signal_labels = file1.getSignalLabels()
@@ -59,6 +72,9 @@ def seizureImageGenerate(secSt, secEn, name_F, parent):
 
 
 def createDataset():
+     """
+     It is a function to create 2D image Dataset from EEG signals
+     """
     print("START \n")
     for indexPatient in range(0, len(patients)):
         # fileList = []
