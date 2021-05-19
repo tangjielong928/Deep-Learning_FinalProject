@@ -1,3 +1,11 @@
+  
+# -*- coding: utf-8 -*-
+# @Time : 2021/5/17 
+# @Author : Jielong Tang & Shumeng Jia
+# @File : train.py
+# @function : It is a file to train the 2D CNN+Bi-GRU model on patients 1 to 10
+
+
 import tensorflow
 import keras
 from keras.models import Sequential
@@ -26,6 +34,14 @@ patients = ["01","02","03","04","05","06","07","08","09","10"]
 
 
 def generatePathList(patients, test_size):
+     """
+     It is a function to shuttle the dataset and return appropriate index for training and testing
+     :param patients: the patients list
+     :param test_size: the test set rate 
+     :return index[:test_index]: the index for testing
+     :return index[test_index:]: the index for training
+     :return pathList: the shuttle pathList
+     """
     parent_path = 'chbfig/'
     pathList = []
     for indexPatient in range(0, len(patients)):
@@ -40,7 +56,16 @@ def generatePathList(patients, test_size):
 
 
 class DataGenerator(Sequence):
+    '''
+    It is a class implement keras Sequence, which is to generate image dataset with appropriate batch and use for model fit_generator function
 
+    :param batch_size: the batch size
+    :param parent_path: the dataset parent path
+    :param pathList: the list to store all image path
+    :param index: the training index or testing index
+    :param L: the dataset length
+    
+    '''
     def __init__(self, index, pathList, parent_path='chbfig/', batch_size=32):
         self.batch_size = batch_size
         self.parent_path = parent_path
