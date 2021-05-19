@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+# @Time : 2021/5/17 17:58
+# @Author : Jielong Tang & Shumeng Jia
+# @File : data_generate.py
+
+
 import tensorflow
 import keras
 from keras.models import Sequential
