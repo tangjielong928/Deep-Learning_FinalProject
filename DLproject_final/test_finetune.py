@@ -26,6 +26,9 @@ patients = ["01","02","03","04","05","06","07","08","09","10"]
 
 
 def testlabelGenerate():
+     """
+     It is a function to generate test dataset for fine tune
+     """
     parent_path = 'chbfig/'
     featureList = []
     labelList = []
