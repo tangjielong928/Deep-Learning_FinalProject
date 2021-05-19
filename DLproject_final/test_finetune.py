@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+# @Time : 2021/5/17 
+# @Author : Jielong Tang & Shumeng Jia
+# @File : test_finetune.py
+# @function : It is a file for model fine tune on patients 11 to 23
+
+
 import tensorflow
 import keras
 from keras.models import Sequential
