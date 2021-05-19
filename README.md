@@ -22,6 +22,22 @@ In this project, we plan to design a robust and high performing detection model 
 Our model combine 2D fully CNN and Bi-directional GRU. The output of the 3rd convolution layer is flattened and fed into Bi-directional GRU layer, then followed by 2 dense layer. The structure is like:
 ![image](https://user-images.githubusercontent.com/41147462/118841202-b00e6400-b8fa-11eb-9a3f-103f19a21eed.png)
 
+## Some files Description
+
+### train_onAWS.ipynb
+If you want to train the model on other cloud computing services like AWS, use this notebook.
+### DLseizuredetect.ipynb
+Background info and comments can be found in this notebook.
+### data_generate.py
+To generate EEG images from raw time series EEG signal, run this file.
+### train.py
+To train the model, run this file.
+### val.py
+To validate your model or our pre-trained model, run this file.
+### test_finetune.py
+To test your model or our pre-trained model on new patients, run this file. The process for fine tune the existed model is also included.
+### model_290-0.99.hdf5
+Load the parameters and settings in this file to use our best model.
 
 ## Performance Comparison
 ![image](https://user-images.githubusercontent.com/41147462/118840395-f0b9ad80-b8f9-11eb-8d7e-a7a2db71a5ba.png)
