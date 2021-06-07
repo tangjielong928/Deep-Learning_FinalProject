@@ -1,4 +1,3 @@
-## Project title
 A Deep Learning Based Detection Model for Epileptiform EEG Data
 
 ## About Project
