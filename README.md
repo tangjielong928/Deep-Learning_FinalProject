@@ -1,15 +1,5 @@
-# Deep-Learning_FinalProject
-This is the Final project for Deep Learning Course ECE-GY 9123 New York University.
-
 ## Project title
 A Deep Learning Based Detection Model for Epileptiform EEG Data
-
-## Group Members
-
-| Group Member   | NYU NetID |
-| -------------- | --------- |
-| Jielong Tang   | jt3994    |
-| Shumeng  Jia  | sj3233    |
 
 ## About Project
 In this project, we plan to design a robust and high performing detection model for epilepsy using the EEG data. Use imaged EEG signal as the input of DL-based automatic seizure detection model and achieve better performance, especially better F1-score. Finish basic performance comparison between our model and existing models.
